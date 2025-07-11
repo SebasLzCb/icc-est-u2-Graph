@@ -1,18 +1,29 @@
-## Getting Started
+# Práctica de Graphs
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Información General
 
-## Folder Structure
+- **Título:** Estructuras No Lineales
+- **Asignatura:** Estructura de Datos
+- **Carrera:** Computación
+- **Estudiante:** Sebastian Loza
+- **Fecha:** 10/07/2025
+- **Profesor:** Ing. Pablo Torres
 
-The workspace contains two folders by default, where:
+---
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Ejecución
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Para ejecutar el proyecto:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+1. Compila el código:
+    ```bash
+    javac App.java
+    ```
+2. Ejecuta la aplicación:
+    ```bash
+    java App
+    ```
 
-## Dependency Management
+## Imagen de Salida de terminal
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+![alt text](image.png)
