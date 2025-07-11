@@ -2,7 +2,9 @@ package controller;
 
 import models.Node;
 
+import java.util.Comparator;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Graph {
@@ -23,15 +25,23 @@ public class Graph {
         dest.addNeighbor(src);
     }
 
-    public void printGraph() {
-        for (Node node : nodes) {
-            System.out.print("Nodo " + node.getValue() + " -> ");
-            for (Node neighbor : node.getNeighbors()) {
-                System.out.print(neighbor.getValue() + " ");
-            }
-            System.out.println();
+public void printGraph() {
+    List<Node> ordenados = nodes.stream()
+        .sorted(Comparator.comparingInt(Node::getValue))
+        .toList();
+
+    for (Node node : ordenados) {
+        System.out.print("Vertex " + node.getValue() + ":");
+        List<Node> vecinos = node.getNeighbors().stream()
+            .sorted(Comparator.comparingInt(Node::getValue))
+            .toList();
+        for (Node vecino : vecinos) {
+            System.out.print(" -> " + vecino.getValue());
         }
+        System.out.println();
     }
+}
+
 
     public void getDFS(Node startNode) {
         Set<Node> visited = new HashSet<>();
